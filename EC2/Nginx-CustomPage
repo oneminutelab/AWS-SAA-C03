@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo apt update -y
+sudo apt install nginx -y
+sudo "Welcome to Nginx - test app" > /var/www/html/index.html
