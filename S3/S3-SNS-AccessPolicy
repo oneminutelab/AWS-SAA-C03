@@ -1,0 +1,20 @@
+{
+  "Version": "2008-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "_s3",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "arn:aws:sns:us-east-2:935723790267:S3Bucket",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceArn": "arn:aws:s3:::mydevteambucket0092"
+        }
+      }
+    }
+  ]
+}
