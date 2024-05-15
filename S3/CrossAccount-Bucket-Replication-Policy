@@ -1,0 +1,31 @@
+{
+    "Version": "2012-10-17",
+    "Id": "",
+    "Statement": [
+        {
+            "Sid": "Object Level Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "S3_Role_ARN"
+            },
+            "Action": [
+                "s3:ReplicateObject",
+                "s3:ReplicateDelete"
+            ],
+            "Resource": "destination_bucket_ARN/*"
+        },
+        {
+            "Sid": "Bucket Level Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "S3_Role_ARN"
+            },
+            "Action": [
+                "s3:List*",
+                "s3:GetBucketVersioning",
+                "s3:PutBucketVersioning"
+            ],
+            "Resource": "destination_bucket_ARN"
+        }
+    ]
+}
