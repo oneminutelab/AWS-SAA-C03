@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Create VPC with Subnet in Singapore Region
+Resources:
+ myitnVPC: 
+  Type: AWS::EC2::VPC
+  Properties:
+    CidrBlock: 10.60.0.0/16
+    InstanceTenancy: default
+    Tags:
+     - Key: Name
+       Value: MYitnVPC
+ mySubnet001: 
+  Type: AWS::EC2::Subnet
+  Properties:
+    AvailabilityZone: ap-southeast-1a
+    CidrBlock: "10.60.5.0/24"
+    Tags:
+     - Key: Name
+       Value: MySubnet001
+    VpcId: !Ref 
