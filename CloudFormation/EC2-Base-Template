@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Create EC2 Instance in Singapore Region
+Resources:
+ MyCFInstance:
+  Type: AWS::EC2::Instance
+  Properties:
+    AvailabilityZone: ap-southeast-1c
+    ImageId: ami-052f483c20fa1351a
+    InstanceType: t2.micro
+    Tags:
+     - Key: Name
+       Value: MY-CF-Instance
