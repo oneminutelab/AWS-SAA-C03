@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Create S3 Bucket with public read access
+Resources:
+# define your bucket name:
+  MyITNBucket2023:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
