@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo yum update -y
+sudo yum install nginx -y 
+sudo echo "Welcome to iTechNets...!!!" > /usr/share/nginx/html/index.html
+sudo systemctl enable nginx
+sudo systemctl start nginx
