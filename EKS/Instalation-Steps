@@ -26,12 +26,18 @@ sudo mv /tmp/eksctl /usr/local/bin
 
 eksctl version
 
-# Create cluster using EKS CLI
+# Create cluster using EKS CLI & 
 
 eksctl create cluster --name testeks-cluster --region ap-southeast-1 --fargate
 
 aws eks update-kubeconfig --name testeks-cluster --region ap-southeast-1 
 
 kubectl get nodes
+
+kubectl get pods
+
+kubectl describe pod nginx
+
+kubectl get pods -o wide
 
 eksctl delete cluster --name testeks-cluster --region ap-southeast-1
