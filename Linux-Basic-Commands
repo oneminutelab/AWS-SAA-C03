@@ -1,0 +1,70 @@
+# Switch to root user
+sudo su
+sudo -i
+
+# To list files and folders
+ls
+ll
+ls -ll
+ls -lrt
+
+# Update packages
+yum update
+apt update
+sudo yum update
+sudo apt update
+
+# Check the location of present working directory
+pwd
+
+# To clrear the screen
+clear
+Ctrl+l (from keyboard)
+
+# Go to any directory
+cd directory name
+
+# Go back to previous directory
+cd .. (1 directory back)
+cd / (Go back to home directory)
+
+# create a new directory
+mkdir directoryname
+
+# remove any directory
+rmdir directoryname
+
+# give temporary permissions of root user to run commands
+sudo command (sudo yum update)
+
+# create new file
+touch filename.extension
+
+# edit file in editor
+vi filename.extension
+vim filename.extension
+nano filename.extension
+
+# check the content of file
+cat filename.extension
+
+# How to check OS Version
+cat /etc/os-release
+
+# check the memory utilization
+free -m
+
+# check the CPU utilization and details
+lscpu
+
+# chek the ip address and interfaces
+ip a
+
+# task manager to view the process details
+top
+
+# to list disk and volumes
+lsblk
+
+# mount any disk or volume
+mount
