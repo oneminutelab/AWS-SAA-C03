@@ -36,6 +36,8 @@ kubectl get nodes
 
 kubectl get pods
 
+kubectl apply -f pod.yml
+
 kubectl describe pod nginx
 
 kubectl get pods -o wide
