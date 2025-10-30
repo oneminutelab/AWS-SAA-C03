@@ -1,0 +1,37 @@
+Resources:
+ #Bucket Creation
+ Bucket:
+  Type: AWS::S3::Bucket
+  Properties:
+   BucketName: testbucket1212092
+ # EC2 Creation
+ EC2Instance:
+  Type: AWS::EC2::Instance
+  Properties:
+   InstanceType: t2.micro
+   ImageId: ami-0146fc9ad419e2cfd
+   Tags:
+   - Key: Name
+     Value: FromCF
+ # VPC Creation
+ VPC:
+  Type: AWS::EC2::VPC
+  Properties:
+   CidrBlock: 10.60.0.0/16
+   Tags:
+   - Key: Name
+     Value: MyVPC
+ # IAM Group Creation
+ IAMGroup:
+  Type: AWS::IAM::Group
+  Properties:
+   GroupName: ITGroup
+ # IAM User Creation
+ IAMUser:
+  Type: AWS::IAM::User
+  Properties:
+   UserName: cfuser
+   LoginProfile:
+    Password: P@ssword123
+   Groups:
+   - ITNGroup
