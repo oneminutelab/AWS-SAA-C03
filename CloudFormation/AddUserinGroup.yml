@@ -1,0 +1,9 @@
+Resources:
+ EC2Instance:
+  Type: AWS::EC2::Instance
+  Properties:
+   InstanceType: t2.micro
+   ImageId: ami-0609186b60570e9c9
+   Tags:
+   - Key: Name
+     Value: FromCF
