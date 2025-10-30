@@ -1,0 +1,7 @@
+Resources:
+ IAMUser:
+  Type: AWS::IAM::User
+  Properties:
+   UserName: cfuser
+   LoginProfile:
+    Password: P@assword123
