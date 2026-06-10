@@ -17,4 +17,4 @@ Resources:
     Tags:
      - Key: Name
        Value: MySubnet001
-    VpcId: !Ref 
+    VpcId: !Ref myitnVPC
